@@ -6,7 +6,10 @@ export default async (name = 'default'): Promise<Connection | undefined> => {
   try {
     const connection = await createConnection(defaultOptions);
     console.log('A conexão com o banco de dados foi estabilizada!');
-    connection.runMigrations();
+    console.log('Rodando Migrações');
+    connection.runMigrations().then(() => {
+      console.log('Migrações Realizadas, banco de dados atualizado!');
+    });
     return connection;
   } catch (error) {
     console.log(
