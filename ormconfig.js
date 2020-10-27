@@ -4,7 +4,7 @@ module.exports = {
   "port": 3307,
   "username": "root",
   "password": "docker",
-  "database": "appgjc",
+  "database": "testeback",
   "entities": [
     process.env.NODE_ENV==='production' ?
     "./dist/modules/**/typeorm/entities/*.js" :

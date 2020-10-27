@@ -12,14 +12,7 @@ import '@shared/container';
 
 import routes from './routes';
 
-createConnection()
-  .then(connection => {
-    console.log('Conectado');
-  })
-  .catch(error => {
-    console.log('Nao foi possivel conectar no DB');
-    console.log(error);
-  });
+createConnection();
 
 const app = express();
 
