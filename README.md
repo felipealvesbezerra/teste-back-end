@@ -4,17 +4,19 @@ Teste back end
 
 ### Product data
 
+<img src="https://github.com/lukaspgtu/teste-back-end/blob/dev/diagram.png">
+
 <ul>
-  <li>name: "required"</li>
-  <li>description: "optional"</li>
-  <li>brand: "required"</li>
-  <li>model: "required"</li>
-  <li>price: "required"</li>
-  <li>category: "optional"</li>
-  <li>subcategory: "optional"</li>
-  <li>imageUrl: "optional"</li>
-  <li>qty: "required"</li>
-  <li>store: "optional"</li>
+  <li>name: required</li>
+  <li>description: optional</li>
+  <li>brand: required</li>
+  <li>model: required</li>
+  <li>price: required</li>
+  <li>category: optional</li>
+  <li>subcategory: optional</li>
+  <li>imageUrl: optional</li>
+  <li>qty: required</li>
+  <li>store: optional</li>
 </ul>
 
 ### Install
