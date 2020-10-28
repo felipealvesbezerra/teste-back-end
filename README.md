@@ -1,24 +1,32 @@
-# Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
+# Product CRUD
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+Teste back end
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+### Product data
 
- ## Iniciando Teste
+<img src="https://github.com/lukaspgtu/teste-back-end/blob/dev/diagram.png">
 
-Para iniciar o teste, faça um fork deste repositório.
+<ul>
+  <li>name: required</li>
+  <li>description: optional</li>
+  <li>brand: required</li>
+  <li>model: required</li>
+  <li>price: required</li>
+  <li>category: optional</li>
+  <li>subcategory: optional</li>
+  <li>imageUrl: optional</li>
+  <li>qty: required</li>
+  <li>store: optional</li>
+</ul>
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+### Install
 
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
+<pre>$ npm install</pre>
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+### Run app
 
+<pre>$ node app.js</pre>
 
-**Boa sorte!**
+### Links
+
++ [Postman Collection](https://documenter.getpostman.com/view/1929826/TVYJ5x2o)
