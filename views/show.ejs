@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastros</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body class="show">
+
+    <h1>Dados</h1>
+    <form>
+    <table class="tabela-show">
+        <thead>
+            <tr class="tr-show" class="tr-show">
+                <td class="td-show">Nome</td>
+                <td class="td-show">Sobrenome</td>
+                <td class="td-show">Sexo</td>
+                <td class="td-show">Idade</td>
+                <td class="td-show">Telefone</td>
+                <td class="td-show">Email</td>
+                <td class="td-show">Linkedin</td>
+                <td class="td-show">Identidade (RG/CNH/CPF)</td>
+                <td class="td-show">CEP</td>
+                <td class="td-show">Rua</td>
+                <td class="td-show">Número</td>
+                <td class="td-show">Bairro</td>
+                <td class="td-show">Cidade</td>
+                <td class="td-show">Estado</td>  
+            </tr>
+        </thead>
+        <tbody>
+            <!-- irá percorrer o conteúdo no banco de dados -->
+            <% data.forEach(function(details) { %>
+            <!-- irá mostrar o conteúdo criado -->
+            <tr class="tr-show">
+                <td class="td-show"><%= details.name %></td>
+                <td class="td-show"><%= details.surname %></td>
+                <td class="td-show"><%= details.sex %></td>
+                <td class="td-show"><%= details.age %></td>
+                <td class="td-show"><%= details.phone %></td>
+                <td class="td-show"><%= details.email %></td>
+                <td class="td-show"><%= details.linkedin %></td>
+                <td class="td-show"><%= details.rg %></td>
+                <td class="td-show"><%= details.cep %></td>
+                <td class="td-show"><%= details.rua %></td>
+                <td class="td-show"><%= details.number %></td>
+                <td class="td-show"><%= details.bairro %></td>
+                <td class="td-show"><%= details.cidade %></td>
+                <td class="td-show"><%= details.uf %></td>
+                <td class="td-show"><button class="btn-login"><a href="/edit/<%= details._id %>">Editar</a></button> - <button class="btn-login"><a href="/delete/<%= details._id %>">Deletar</a></button></td>
+
+            </tr>
+            <% }) %>
+
+        </tbody>
+    </table><br>
+    <button class="btn-login"><a href="/">Cadastrar novo</button>
+        </form>
+    </body>
+
+</html>
