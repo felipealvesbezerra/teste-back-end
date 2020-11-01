@@ -1,0 +1,105 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.tabela-show, .tr-show, .td-show {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+    padding: 1px;
+}
+
+* {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+  body {
+    background-image: linear-gradient(to right, #001aff , #ff5100);
+    font-family: Roboto, Arial, sans-serif;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: white;
+  }
+  
+  form {
+    margin: 20px 0;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 5px;
+  }
+  
+  form .input-block {
+    margin-bottom: 20px;
+  }
+  
+  form .input-block label {
+    font-size: 14px;
+    color: darkslateblue;
+  }
+  
+  form .input-block input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: #7159c1;
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: #7159c1;
+  }
+  
+  form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-image: linear-gradient(to right, #001aff , #ff5100);
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+  }
+
+  select{
+    width: 210px;
+    height: 32px;
+    font-size: 14px;
+    background: #f2f2f3;
+    padding-left: 32%;
+}
+
+.form-wrapper{
+    float: left;
+}
+
+.label-genero{
+    margin-bottom: 9px;
+}
+
+.tabela-home{
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
