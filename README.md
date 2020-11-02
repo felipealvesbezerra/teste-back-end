@@ -6,17 +6,17 @@ URL collections: https://www.getpostman.com/collections/d51a02bdba51ec2aebe5
 
 ## MongoDB
 
-Crie um banco de dados cloud em (https://mlab.com)
+Crie um banco de dados cloud em (https://mlab.com).
 
-Coloque a url de conexão arquivo de configuração (server/srcv/config/mongo.js)
+Coloque a url de conexão no arquivo de configuração (server/srcv/config/mongo.js).
 
 ## API
 
-Entre na pasta (server) e instale os pacotes digitando no terminal (yarn). Depois de concluído, digite novamente (yarn dev)
+Entre na pasta (server) e instale os pacotes digitando no terminal (yarn). Depois de concluído, digite novamente (yarn dev).
 
 ## Documentação
 
-Entre na pasta (server) e digite no terminal (yarn doc)
+Entre na pasta (server) e digite no terminal (yarn doc).
 
 Acesse a documentação: http://localhost:3333/apidoc
 
