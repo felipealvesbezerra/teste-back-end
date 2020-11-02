@@ -1,24 +1,33 @@
-# Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
+# Teste Teddy Soluções
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+## Postman
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+URL collections: https://www.getpostman.com/collections/d51a02bdba51ec2aebe5
 
- ## Iniciando Teste
+## MongoDB
 
-Para iniciar o teste, faça um fork deste repositório.
+Crie um banco de dados cloud em (https://mlab.com)
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+Coloque a url de conexão arquivo de configuração (server/srcv/config/mongo.js)
 
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
+## API
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+Entre na pasta (server) e instale os pacotes digitando no terminal (yarn). Depois de concluído, digite novamente (yarn dev)
 
+## Documentação
 
-**Boa sorte!**
+Entre na pasta (server) e digite no terminal (yarn doc)
+
+Acesse a documentação: http://localhost:3333/apidoc
+
+## Bonus
+
+Foi criada uma aplicação front-end utilizando o framework React.
+
+Entre na pasta (bonus/front-end). Inicie a aplicação digitando no terminal (yarn start).
+
+## Agradecimentos
+
+Agradeço a Teddy Soluções por participar desta seleção de devs.
+
+Obrigado.
