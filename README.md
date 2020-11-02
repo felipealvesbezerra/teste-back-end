@@ -1,24 +1,32 @@
 # Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+API REST CRUD desenvolvida em ambiente __NodeJS__ com linguagem __TypeScript__, utilizando como base de dados o banco em nuvem NoSQL __MongoDB__.
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+A aplicação é capaz de criar um usuário, listar todos os usuários, atualizar um usuário e também deletar um usuário.
 
- ## Iniciando Teste
+O formato dos campos, em JSON, devem conter:
 
-Para iniciar o teste, faça um fork deste repositório.
+```
+{
+	"nome": "",
+	"sobrenome": "",
+	"email": "",
+	"genero": "",
+	"cpf": "", (máximo 11 dígitos)
+	"telefone": "", (máx 11 dígitos)
+	"endereco": "",
+	"complemento": "",
+	"cidade": "",
+	"estado": "" (2 dígitos, ex: SP)
+}
+```
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+Para testar a aplicação, clone este repositório e utilize no terminal o comando ```yarn``` para instalar todas as dependências necessárias.
 
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
+Para gerar a documentação da API, foi utilizado o software Postman, acionandas todas as requisições e a partir da coleção users -> botão View in Web para gerar a documentação da API.
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+Para acessar o __link da documentação__ da API, clique [aqui](https://web.postman.co/collections/13320329-e0fb0acb-6e42-4212-9cb7-8fc5fe362095?version=latest&workspace=317a4415-fc3b-414c-8174-515b728beb31).
+
+Para acessar o __link da collection__ usada no postman, clique [aqui](https://www.getpostman.com/collections/5a5c19cb6492a38b44a2)
 
 
-**Boa sorte!**
