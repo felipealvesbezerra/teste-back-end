@@ -1,0 +1,13 @@
+{
+  "name": "teste-back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:root-marco/teste-back-end.git",
+  "author": "slowed <rootslowed@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11"
+  }
+}
