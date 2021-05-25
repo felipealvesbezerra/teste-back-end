@@ -1,25 +1,21 @@
 import Book from "../models/Book";
 import service from "../services/BookService";
 
+
 import * as Yup from "yup";
+
+var book = null;
 
 class BooksController {
 
     async index ( req, res ) { 
         const allBooks = await service.find();
 
-        return res.status(200).json({ data: allBooks });
+        res.status(200).json({ data: allBooks });
     }
 
-    //ainda falta ver
-    async show ( req, res ) {
-        const id = req.params.id;
-        const book = await service.findOne(id);
-
-        if(!book) 
-        console.log(book)
-        
-        return res.status(200).json({ data: book });
+    async show ( req, res ) {  
+        return res.status(200).json({ data: res.book });
     }
     
     async create ( req, res ) {
@@ -45,7 +41,7 @@ class BooksController {
 
         const newBook = await Book.create(req.body);
 
-        return res.status(201).json({ data: newBook });
+        res.status(201).json({ data: newBook });
     }
 
     async update ( req, res ) {
@@ -69,15 +65,37 @@ class BooksController {
             return res.status(400).json({ error: 'Validation fails' });
           }
 
+        const id = req.params.id;
+        const updateBook = { title, subtitle, content, category, author, gender, pages, date, isbn, year }
 
-
-        return res.status(200).json({ msg: "Book updated"});
+        try{
+            await Book.findByIdAndUpdate(id, updateBook);
+            return res.status(200).json({ msg: "Book updated", data: res.book})
+        }catch(err){
+            return res.status(400).json({ msg: err.message })
+        }
     }
 
-    destroy ( req, res ) {
+    async destroy ( req, res ) {
+        //console.log(req.params.id)
+        await Book.findByIdAndDelete(req.params.id);
         return res.json({ msg: "Book destroy"});
     }
 
+    async verifyId(req, res, next){
+        try {
+            //book = null;
+            book = await Book.findById(req.params.id);
+            if(book == null) {
+                return res.status(404).json({ message: "Book not found!"});
+            }
+        } catch (error) {
+            return res.status(500).json({ message: error.message });
+        }
+
+        res.book = book;
+        next()
+    }
 }
 
 export default new BooksController();

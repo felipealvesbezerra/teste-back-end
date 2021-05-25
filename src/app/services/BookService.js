@@ -8,7 +8,7 @@ class BookService {
     }
 
     findOne(id) {
-        return Book.findById({ _id: id }).exec();
+        return Book.findOne({ _id: id});
     }
 
     create(title, subtitle, content, category, author, gender, pages, date, isbn, year) {
@@ -16,9 +16,17 @@ class BookService {
             gender: gender, pages: pages, isbn: isbn, year: year });
     }
 
-    update(title, subtitle, content, category, author, gender, pages, date, isbn, year) {
-        return Book.save({ title: title, subtitle: subtitle, content: content, category: category, author: author, 
+    update(id, title, subtitle, content, category, author, gender, pages, date, isbn, year) {
+        return Book.save({ _id: id, title: title, subtitle: subtitle, content: content, category: category, author: author, 
             gender: gender, pages: pages, isbn: isbn, year: year });
+    }
+
+    delete(id) {
+        try{
+            Book.findByIdAndDelete(id);
+        } catch(error) {
+            return error;
+        }
     }
 }
 
