@@ -10,7 +10,8 @@ const booksModel = new mongoose.Schema({
 	pages: Number,
 	//date: { type: Date }, 
 	isbn: String,
-	year: Number
+	year: Number,
+	link: String
 })
 
 export default mongoose.model("Book", booksModel);

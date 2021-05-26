@@ -1,24 +1,32 @@
 # Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+# Postman
+Link: https://www.getpostman.com/collections/7dbe9a225cf0899cb5f2
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+## Explicação sobre projeto
 
- ## Iniciando Teste
+Projeto criado em Node.js, mongodb, mongoose para conexão ao banco de dados e swagger para a documentação do projeto.
 
-Para iniciar o teste, faça um fork deste repositório.
+## Documentação
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+Para acessar a documentação, entre no link a baixo.
+[link]http://localhost:3000/docs
+
+## Sobre o projeto
+
+O projeto foi criado visando o gerenciamento de livros, com todos os metodos de CRUD.
+
+## Executar o projeto
+Instalar as dependencias
+
+Run `yarn install` ou `yarn`
+
+Executar o projeto
+
+Run `yarn dev`
 
 ## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+Estou utilizando o banco de dados MongoDB. 
 
-
-**Boa sorte!**
+**book-api**
