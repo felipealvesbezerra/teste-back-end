@@ -15,12 +15,12 @@ const user = new mongoose.Schema({
   nickname: {
     type: String,
     maxlength: 30,
-    required: true,
+    required: false,
   },
   gender: {
     type: String,
     maxlength: 10,
-    required: true,
+    required: false,
   },
   email: {
     type: String,
@@ -41,6 +41,11 @@ const user = new mongoose.Schema({
     type: String,
     maxlength: 100,
     required: true,
+  },
+  phone: {
+    type: String,
+    maxlength: 50,
+    required: false,
   },
   bio: {
     type: String,
