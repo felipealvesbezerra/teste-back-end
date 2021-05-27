@@ -6,7 +6,7 @@ import dotenv from "dotenv"; dotenv.config();
 // APP
 const app = express();
 app.use(express.json());
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const MONGOURI = process.env.MONGOURI;
 
 // ROUTER
