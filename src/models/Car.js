@@ -15,7 +15,7 @@ class Car extends Model {
     }
 
     static associate(models) {
-        this.belongsTo(models.Rent, { foreignKey: 'rents_id', as: 'rent'})
+        this.hasMany(models.Rent, { foreignKey: 'car_id', as: 'cars'})
     }
 }
 

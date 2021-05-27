@@ -38,7 +38,9 @@ class CustomerController {
     async update(req, res) {
       try {
         const customer = await Customer.findByPk(req.params.id)
-  
+        if (!customer) {
+          return res.status(404).send({erro: "Customer not found"})
+         }
         await customer.update(req.body)
   
         return res.json({ customer })

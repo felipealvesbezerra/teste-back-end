@@ -3,7 +3,8 @@ const app = express()
 const morgan = require('morgan')
 
 const customerRoute = require('./src/routes/CustomerRoute')
-const rentRoute = require('./src/routes/RentRoute ')
+const rentRoute = require('./src/routes/RentRoute')
+const carRoutes = require('./src/routes/CarRoute')
 
 app.use(morgan('dev'))
 
@@ -11,8 +12,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/customers', customerRoute)
-
 app.use('/customers', rentRoute)
+app.use('/cars', carRoutes)
+
+
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')

@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const RentController = require('../controllers/RentController')
 
-router.post('/:customer_id/rents', RentController.store)
+router.post('/:customer_id/rents/:car_id', RentController.store)
 
 router.get('/:customer_id/rents', RentController.index)
 router.get('/rents/:id', RentController.show)

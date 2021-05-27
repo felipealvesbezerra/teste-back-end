@@ -5,33 +5,39 @@ const { DataTypes } = require('sequelize')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
-     return queryInterface.createTable('cars', {
+     return queryInterface.createTable('rents', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
       },
-      plate: {
+      customer_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: 'customers', key: 'id'},
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
+      car_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: 'cars', key: 'id'},
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
+      name: {
         type: Sequelize.STRING,
         allowNull: false
       }, 
-      color: {
-        type: Sequelize.STRING,
-        allowNull: false
-      }, 
-      model: {
-        type: Sequelize.STRING,
+      initial_date: {
+        type: Sequelize.DATE,
         allowNull: false
       },
-      year: {
-        type: Sequelize.STRING,
+      final_date: {
+        type: Sequelize.DATE,
         allowNull: false
       },
-      daily: {
-        type: Sequelize.STRING,
-        allowNull: false
-      }, 
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
@@ -45,7 +51,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('cars')
+    return queryInterface.dropTable('rents')
 
   }
 };
