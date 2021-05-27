@@ -5,7 +5,6 @@ import dotenv from "dotenv"; dotenv.config();
 
 // APP
 const app = express();
-const PORT = process.env.PORT;
 
 // MONGOOSE
 try {
@@ -13,11 +12,10 @@ try {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   });
+  console.log("database connected");
 } catch (error) {
-  console.log(error);
+  console.error(error);
+  process.exit(1);
 }
 
-// LISTEN
-app.listen(PORT, () => {
-  console.log(`server running at localhost:${PORT}`);
-});
+export default app;

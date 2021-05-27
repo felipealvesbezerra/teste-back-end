@@ -1,7 +1,7 @@
 {
   "name": "teste-back-end",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "repository": "git@github.com:root-marco/teste-back-end.git",
   "author": "slowed <rootslowed@gmail.com>",
