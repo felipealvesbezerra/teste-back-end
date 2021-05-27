@@ -1,0 +1,181 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Books Store",
+    "description": "Books Store API."
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/books/{id}": {
+      "get": {
+        "tags": [],
+        "description": "Get book by ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/books/": {
+      "get": {
+        "tags": [],
+        "description": "Get all books",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/books": {
+      "post": {
+        "tags": [],
+        "description": "Save book",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "book",
+            "in": "body",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/books/{id}/": {
+      "put": {
+        "tags": [],
+        "description": "Update book",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "book",
+            "in": "body",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+        "delete": {
+          "tags": [],
+          "description": "",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+    }
+  },
+  "definitions": {
+    "Book": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "Desconstruindo a Web"
+        },
+        "subtitle": {
+          "type": "string",
+          "example": "As tecnologias por trás de uma requisição"
+        },
+        "content": {
+          "type": "string",
+          "example": "Desde o momento em que o usuário aperta a tecla Enter do teclado até a página aparecer completamente carregada na tela, ocorre uma série de eventos. Como o navegador faz a chamada? Como a requisição sai do sistema operacional e chega ao servidor de destino? Como o HTTPS funciona? Como o servidor de aplicação se integra ao framework de desenvolvimento web?"
+        },
+        "category": {
+          "type": "string",
+          "example": "development"
+        },
+        "author": {
+          "type": "string",
+          "example": "Willian Molinari"
+        },
+        "gender": {
+          "type": "string",
+          "example": "Education"
+        },
+        "pages": {
+          "type": "number",
+          "example": 255
+        },
+        "link": {
+          "type": "string",
+          "example": "https://www.casadocodigo.com.br/products/livro-desconstruindo-web"
+        },
+        "isbn": {
+          "type": "string",
+          "example": "978-85-5519-210-4"
+        },
+        "year": {
+          "type": "number",
+          "example": 2018
+        }
+      }
+    }
+  }
+}

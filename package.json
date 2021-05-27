@@ -1,0 +1,35 @@
+{
+  "name": "teste-back-end",
+  "version": "1.0.0",
+  "description": "Projeto referente ao a vaga de desenvolvedor back-end Node.JS.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-openapi-validator": "^4.12.11",
+    "mongoose": "^5.12.11",
+    "multer": "^1.4.2",
+    "swagger-autogen": "^2.8.2",
+    "swagger-ui-express": "^4.1.4",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslit": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "sucrase": "^3.18.1"
+  },
+  "scripts": {
+    "start-gendoc": "node swagger.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunosoaresbomfim/teste-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunosoaresbomfim/teste-back-end/issues"
+  },
+  "homepage": "https://github.com/brunosoaresbomfim/teste-back-end#readme"
+}
