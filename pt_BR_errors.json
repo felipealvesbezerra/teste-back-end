@@ -1,0 +1,14 @@
+{
+  "ERR_COMPANY_NAME_FIELD_EMPTY": "Campo nome da empresa vazio",
+  "ERR_FANTASY_NAME_FIELD_EMPTY": "Campo nome fantasia vazio",
+  "ERR_CNPJ_FIELD_EMPTY": "Campo CNPJ vazio",
+  "ERR_OPENING_DATE_FIELD_EMPTY": "Campo data de abertura vazio",
+  "ERR_OPENING_DATE_INVALID": "Data invalida ou fora do padrão",
+  "ERR_SHARE_CAPITAL_FIELD_EMPTY": "Campo capital social vazio",
+  "ERR_NUMBER_EMPLOYEEE_FIELD_EMPTY": "Campo numeros de funcionarios vazio",
+  "ERR_ZIP_CODE_FIELD_EMPTY": "Campo cep vazio",
+  "ERR_CITY_FIELD_EMPTY": "Campo cidade vazio",
+  "ERR_STATE_FIELD_EMPTY": "Campo estado vazio",
+  "ERR_COUNTRY_FIELD_EMPTY": "Campo país vazio",
+  "ERR_CNPJ_INVALID": "CNPJ invalido"
+}

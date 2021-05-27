@@ -1,24 +1,23 @@
 # Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+## Explicação desse projeto
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+Essa api foi projetada para um cadastro simples de empresas, onde o intuito é cadastrar, listar, alterar e excluir as respectivas empreas.
 
- ## Iniciando Teste
+## Tecnologias utilizadas
 
-Para iniciar o teste, faça um fork deste repositório.
+- Node.JS(Javascript) - Doc https://nodejs.org/pt-br/docs/
+- MongoDB Atlas(Banco em nuvem) Doc - https://nodejs.org/pt-br/docs/
+- Mongoose(Lib) - Doc - https://mongoosejs.com/docs/guide.html
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+## Documentação
 
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
+A Documentação desta API se encontra em http://localhost:3000/docs/
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+## Coleção do postman
 
+A coleção se encontra em https://www.getpostman.com/collections/6642220e59443a1d1b6e
 
-**Boa sorte!**
+## Execução do projeto
+
+- **Importante:** Para instalar as dependencias: abra o terminal e navegue ate a teste-back-end e rode o seguinte comando **npm i**, depois do processo ter finalizado, rode o comando **npm run dev para subir a aplicação**

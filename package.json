@@ -1,0 +1,35 @@
+{
+  "name": "teste-back-end",
+  "version": "1.0.0",
+  "description": "> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonaldoVasconcelos1/teste-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonaldoVasconcelos1/teste-back-end/issues"
+  },
+  "homepage": "https://github.com/RonaldoVasconcelos1/teste-back-end#readme",
+  "dependencies": {
+    "cli-table": "^0.3.6",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "mongoose": "^5.12.11",
+    "swagger-jsdoc": "^7.0.0-rc.6",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
