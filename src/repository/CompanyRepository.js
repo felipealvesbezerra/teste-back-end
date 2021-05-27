@@ -10,4 +10,12 @@ module.exports = class CompanyModel {
     }
 
   }
+	
+	static async create(model) {
+    try {
+      return await db.create(model); 
+    } catch (error) {
+      return error;
+    }
+  }
 }
