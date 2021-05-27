@@ -4,7 +4,8 @@
   "description": "> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "express": "^4.17.1",
     "express-useragent": "^1.0.15",
     "mongoose": "^5.12.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
