@@ -6,9 +6,15 @@
   "repository": "git@github.com:root-marco/teste-back-end.git",
   "author": "slowed <rootslowed@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
