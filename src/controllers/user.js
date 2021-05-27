@@ -50,15 +50,15 @@ async function postUser (req, res) {
 // Updating One
 async function patchUser (req, res) {
 
-  res.user.firstname = req.body.firstname;
-  res.user.lastname = req.body.lastname;
-  res.user.nickname = req.body.nickname;
-  res.user.gender = req.body.gender;
-  res.user.email = req.body.email;
-  res.user.age = req.body.age;
-  res.user.cpf = req.body.cpf;
-  res.user.address = req.body.address;
-  res.user.bio = req.body.bio;
+  if (req.body.firstname) res.user.firstname = req.body.firstname;
+  if (req.body.lastname) res.user.lastname = req.body.lastname;
+  if (req.body.nickname) res.user.nickname = req.body.nickname;
+  if (req.body.gender) res.user.gender = req.body.gender;
+  if (req.body.email) res.user.email = req.body.email;
+  if (req.body.age) res.user.age = req.body.age;
+  if (req.body.cpf) res.user.cpf = req.body.cpf;
+  if (req.body.address) res.user.address = req.body.address;
+  if (req.body.bio) res.user.bio = req.body.bio;
 
   try {
     const updatedUser = await res.user.save();
@@ -71,11 +71,26 @@ async function patchUser (req, res) {
 
 }
 
+// Deleting One
+async function deleteUser (req, res) {
 
+  try {
+    await res.user.remove();
+    res.json({
+      message: 'user deleted successfully',
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+
+}
 
 export {
   getUsers,
   getUserId,
   postUser,
   patchUser,
+  deleteUser,
 };

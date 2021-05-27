@@ -7,7 +7,7 @@
   "author": "slowed <rootslowed@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "devStart": "nodemon ./src/server.js"
+    "devStart": "nodemon app.js"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

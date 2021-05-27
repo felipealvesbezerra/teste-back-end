@@ -8,8 +8,9 @@ router.get("/", controller.getUsers);
 router.get("/:id", getUser, controller.getUserId);
 router.post("/", controller.postUser);
 router.patch("/:id", getUser, controller.patchUser);
+router.delete("/:id", getUser, controller.deleteUser);
 
-async function getUser(req, res, next) {
+async function getUser (req, res, next) {
 
   let user;
 
