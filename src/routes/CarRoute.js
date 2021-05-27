@@ -5,7 +5,7 @@ const CarController = require('../controllers//CarController')
 router.get('/', CarController.index)
 router.post('/', CarController.store)
 router.get('/:id', CarController.show)
-router.patch('/:id', CarController.update)
+router.put('/:id', CarController.update)
 router.delete('/:id', CarController.destroy)
 
 

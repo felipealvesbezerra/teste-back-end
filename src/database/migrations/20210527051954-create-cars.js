@@ -18,7 +18,6 @@ module.exports = {
       }, 
       color: {
         type: Sequelize.STRING,
-        allowNull: false
       }, 
       model: {
         type: Sequelize.STRING,
@@ -30,7 +29,6 @@ module.exports = {
       },
       daily: {
         type: Sequelize.FLOAT,
-        allowNull: false
       }, 
       created_at: {
         type: Sequelize.DATE,

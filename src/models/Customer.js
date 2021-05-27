@@ -3,15 +3,43 @@ const { Model, DataTypes } = require('sequelize')
 class Customer extends Model {
     static init(sequelize) {
         super.init({
-            name: DataTypes.STRING,
+            name: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'name cannot be null'
+                    }
+                }
+            },
             email: {
                 type: DataTypes.STRING,
+                allowNull: false,
                 validate: {
+                    notNull: {
+                        msg: 'email cannot be null'
+                    },
                     isEmail: true,
                 }
             },
-            cpf: DataTypes.STRING,
-            cnh: DataTypes.STRING,
+            cpf: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'cpf cannot be null'
+                    }
+                }
+            },
+            cnh: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'cnh cannot be null'
+                    }
+                }
+            },
             phone: {
                 type: DataTypes.DOUBLE,
                 validate: {
@@ -31,7 +59,7 @@ class Customer extends Model {
     }
 
     static associate(models) {
-        this.hasMany(models.Rent, { foreignKey: 'customer_id', as: 'rents'})
+        this.hasMany(models.Rent, { foreignKey: 'customer_id', as: 'rents' })
     }
 }
 

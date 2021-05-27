@@ -6,7 +6,7 @@ class CarController {
       try {
         const car = await Car.findAll()
   
-        return res.json(car)
+        return res.send(car)
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -19,7 +19,7 @@ class CarController {
          return res.status(404).send({erro: "Car not found"})
         }
 
-        return res.json(car)
+        return res.send(car)
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -29,7 +29,7 @@ class CarController {
       try {
         const car = await Car.create(req.body)
   
-        return res.json(car)
+        return res.send({inserted_car: car})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -43,7 +43,7 @@ class CarController {
         }
         await car.update(req.body)
   
-        return res.json({ car })
+        return res.send({ altered_car: car })
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -55,7 +55,7 @@ class CarController {
   
         await car.destroy()
   
-        return res.status(200).send({deleted: car})
+        return res.status(200).send({deleted_car: car})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }

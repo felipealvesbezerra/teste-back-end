@@ -3,9 +3,33 @@ const { Model, DataTypes } = require('sequelize')
 class Rent extends Model {
     static init(sequelize) {
         super.init({
-            name: DataTypes.STRING,
-            initial_date: DataTypes.DATE,
-            final_date: DataTypes.DATE,
+            name: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'name cannot be null'
+                    }
+                }
+            },
+            initial_date: {
+                type: DataTypes.DATE,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'initial_date cannot be null'
+                    }
+                }
+            },
+            final_date: {
+                type: DataTypes.DATE,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'final_date cannot be null'
+                    }
+                }
+            },
         },
             {
                 sequelize

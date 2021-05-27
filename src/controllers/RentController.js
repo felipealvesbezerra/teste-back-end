@@ -33,10 +33,11 @@ class RentController {
         }
         
         const {car_id} = rent.dataValues
-        console.log(car_id)
-        const car = await Car.findByPk(car_id)
+      
+        const {model, year, daily} = await Car.findByPk(car_id)
 
-        return res.send({rent, car})
+ 
+        return res.send({...rent.dataValues, car: {model, year, daily}})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -60,7 +61,7 @@ class RentController {
           car_id,
         })
   
-        return res.json(rent)
+        return res.send({ inserted_rent: rent})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -74,7 +75,7 @@ class RentController {
          }
         await rent.update(req.body)
   
-        return res.json({ rent })
+        return res.send({ altered_rent: rent })
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -86,7 +87,7 @@ class RentController {
   
         await rent.destroy()
   
-        return res.status(200).send({deleted: rent})
+        return res.status(200).send({deleted_rent: rent})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }

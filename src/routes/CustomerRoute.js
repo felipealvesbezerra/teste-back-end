@@ -5,7 +5,7 @@ const CustomerController = require('../controllers/CustomerController')
 router.get('/', CustomerController.index)
 router.post('/', CustomerController.store)
 router.get('/:id', CustomerController.show)
-router.patch('/:id', CustomerController.update)
+router.put('/:id', CustomerController.update)
 router.delete('/:id', CustomerController.destroy)
 
 
