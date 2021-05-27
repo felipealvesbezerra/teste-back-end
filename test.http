@@ -1,0 +1,68 @@
+### Register new account
+POST http://localhost:4000/api/register
+Content-Type: application/json
+
+{
+    "userName": "testUserddd",
+    "password": "t3stP@ssw0rdd",
+    "email": "test@tdestemail.com",
+    "firstName": "Jordan",
+    "lastName": "Bispo",
+    "birth": "1987-07-25",
+    "gender": "male",
+    "balance": 100.00
+}
+
+### Login
+POST http://localhost:4000/api/login
+Content-Type: application/json
+
+{
+    "userName":"testUser",
+    "password": "t3stP@ssw0rd"
+}
+
+### get account 
+GET http://localhost:4000/api/getAccount
+Authorization: Bearer {token}
+
+
+### Balance recharge
+PATCH  http://localhost:4000/api/balanceR?value=
+Authorization: Bearer {token}
+
+
+### Add or remove product to cart
+# if quantity is negative (q<=0), it will be removed in same amount as  value
+PATCH  http://localhost:4000/api/uptadecart
+Authorization: Bearer {token}
+Content-Type: application/json
+
+{
+    "productList": [
+        {
+            "title": "Jacket",
+            "description": "red leather jacket",
+            "price": 20.90
+        },
+        {
+            "title": "T-shirt",
+            "description": "blue cotton T-shirt",
+            "price": 18.50,
+            "quantity": 4
+        }
+    ]
+}
+
+### Buy product from the cart
+# if productList is empty, buy all products of the cart
+PUT http://localhost:4000/api/buy
+Authorization: Bearer {token}
+Content-Type: application/json
+
+{
+    "productList": [
+        
+    ]
+}
+
