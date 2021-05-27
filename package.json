@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/RonaldoVasconcelos1/teste-back-end/issues"
   },
-  "homepage": "https://github.com/RonaldoVasconcelos1/teste-back-end#readme"
+  "homepage": "https://github.com/RonaldoVasconcelos1/teste-back-end#readme",
+  "dependencies": {
+    "cli-table": "^0.3.6",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "mongoose": "^5.12.11"
+  }
 }
