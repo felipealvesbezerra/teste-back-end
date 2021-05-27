@@ -1,24 +1,58 @@
-# Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
+# Account Manager API
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+A simple rest API to manage super market customers accounts, this API uses a jwt token (generated at login) to authenticate accounts and protect API routes.
+This API was programmed using Node.js and MongoBD.
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js&logoColor=white)
+![](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
- ## Iniciando Teste
+## Author
+<a href="https://jordanbispo.com.br">Jordan Rodrigo Souza Bispo</a>
 
-Para iniciar o teste, faça um fork deste repositório.
+## Installation
 
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
+1º step - In the root folder create the .env file containing the environment variables according to the .env.example file.
 
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
+2º step - Run
+```bash 
+    > npm i 
 
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
+      or
+
+    > yarn
+```
+to install the node's dependencies.
+
+3º step - Run 
+```bash 
+    > npm start 
+
+       or
+
+    > yarn start
+``` 
+
+to start server.
+
+## Usage
+ 
+Use the post, get, put and patch methods, with the correct parameters in the following end poits:
+    *obs.: all responses from the server contain an object with a message, ({message: "message"}), and if requested a get or patch can also contain objects and lists according to the route
+
+## TEST.http
+Case you are using VSCode, Install / enable the extension "REST Client" to test in a simple way and testing the api routes with just one click.
+
+If the extension is enabled, it is enough that the server is running on localhost to test the routes.
+
+In the file above each route there is written "Send Request"
+and just click on the word and the request will be made.
+
+https://github.com/Huachao/vscode-restclient/blob/master/README.md
 
 
-**Boa sorte!**
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
