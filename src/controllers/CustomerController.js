@@ -53,7 +53,7 @@ class CustomerController {
   
         await customer.destroy()
   
-        return res.status(200).send({customer})
+        return res.status(200).send({deleted: customer})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }

@@ -29,6 +29,10 @@ class Customer extends Model {
                 sequelize
             })
     }
+
+    static associate(models) {
+        this.hasMany(models.Rent, { foreignKey: 'customer_id', as: 'rents'})
+    }
 }
 
 
