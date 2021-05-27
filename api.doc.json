@@ -1,0 +1,209 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Company Create",
+    "description": "API Desenvolvida para o teste de Desenvolvedor Back-end para Teddy Open Banking.\n Linkedin: https://www.linkedin.com/in/ronaldo-vasconcelos-847507166/\n Coleção do postman - https://www.getpostman.com/collections/6642220e59443a1d1b6e",
+    "contact":{
+      "email": "ronaldo.asconcellos@gmail.com"
+    },
+    "externalDocs": {
+      "description": "Coleção do Postman",
+      "url": ""
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/company/": {
+      "get": {
+        "summary": "Listagem de empresas",
+        "tags": [],
+        "description": "Lista as empresas cadastradas",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        }
+      }
+    },
+    "/v1/company/{id}": {
+      "get": {
+        "tags": [],
+        "summary": "Visualização de empresa",
+        "description": "Visualiza dados de uma empresa",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/v1/company": {
+      "post": {
+        "summary": "Criação de empresa",
+        "tags": [],
+        "description": "Cria uma empresa",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "type": "string",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+          
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          },
+          "406": {
+            "description": "Not Acceptable - ERR_CNPJ_EXISTS"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/v1/company/{id}/": {
+      "put": {
+        "tags": [],
+        "summary": "Atualização de empresa",
+        "description": "Atualiza uma empresa",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Company",
+            "in": "body",
+            "type": "string",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso",
+            "schema": {
+              "$ref": "#/definitions/Company"
+            }
+          },
+          "406": {
+            "description": "Not Acceptable - ERR_CNPJ_EXISTS"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+       
+      },
+        "delete": {
+          "tags": [],
+          "summary": "Exclusão de empresa",
+          "description": "Exclui uma empresa",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+    }
+  },
+  "definitions": {
+    "Company": {
+      "type": "object",
+      "properties": {
+        "companyName": {
+          "type": "string",
+          "example": "toddy company ltda"
+        },
+        "fantasyName": {
+          "type": "string",
+          "example": "toddy bank open"
+        },
+        "cnpj": {
+          "type": "string",
+          "example": "03.502.839/0001-16"
+        },
+        "openingDate": {
+          "type": "string",
+          "example": "25/02/2021"
+        },
+        "shareCapital": {
+          "type": "string",
+          "example": "500000"
+        },
+        "numberEmployee": {
+          "type": "string",
+          "example": "25"
+        },
+        "zipCode": {
+          "type": "number",
+          "example": 25689000
+        },
+        "city": {
+          "type": "string",
+          "example": "itaqua"
+        },
+        "state": {
+          "type": "string",
+          "example": "são paulo"
+        },
+        "country": {
+          "type": "string",
+          "example": "brasil"
+        }
+      }
+    }
+  }
+}
