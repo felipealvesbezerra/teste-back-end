@@ -59,4 +59,5 @@ http://localhost:3000/api-docs/
 ![Documentação com swagger 02](imgs/02.JPG)
 
 **Collection postman:
+
 ![Collection postman](imgs/03.JPG)
