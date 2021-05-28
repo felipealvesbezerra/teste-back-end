@@ -41,7 +41,7 @@ class Customer extends Model {
                 }
             },
             phone: {
-                type: DataTypes.DOUBLE,
+                type: DataTypes.STRING,
                 validate: {
                     len: [8, 12],
                 }

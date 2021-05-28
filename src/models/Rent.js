@@ -3,22 +3,15 @@ const { Model, DataTypes } = require('sequelize')
 class Rent extends Model {
     static init(sequelize) {
         super.init({
-            name: {
-                type: DataTypes.STRING,
-                allowNull: false,
-                validate: {
-                    notNull: {
-                        msg: 'name cannot be null'
-                    }
-                }
-            },
+            name: DataTypes.STRING,
             initial_date: {
                 type: DataTypes.DATE,
                 allowNull: false,
                 validate: {
                     notNull: {
                         msg: 'initial_date cannot be null'
-                    }
+                    },
+                    isDate: true
                 }
             },
             final_date: {
@@ -27,7 +20,8 @@ class Rent extends Model {
                 validate: {
                     notNull: {
                         msg: 'final_date cannot be null'
-                    }
+                    },
+                    isDate: true
                 }
             },
         },

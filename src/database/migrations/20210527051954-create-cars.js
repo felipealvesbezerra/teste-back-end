@@ -23,6 +23,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      manufacturer: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       year: {
         type: Sequelize.STRING,
         allowNull: false

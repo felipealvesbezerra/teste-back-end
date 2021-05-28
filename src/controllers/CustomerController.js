@@ -29,7 +29,7 @@ class CustomerController {
     try { 
       const customer = await Customer.create(req.body)
 
-      return res.send({ inserted_customer: customer })
+      return res.status(201).send({ inserted_customer: customer })
     } catch (err) {
       return res.status(400).send({ error: err.message })
     }
@@ -46,7 +46,7 @@ class CustomerController {
        }
       await customer.update(req.body)
       
-      return res.send({ altered_customer: customer })
+      return res.status(200).send({ altered_customer: customer })
     } catch (err) {
       return res.status(400).send({ error: err.message })
     }

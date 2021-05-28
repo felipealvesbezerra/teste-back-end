@@ -27,17 +27,19 @@ class RentController {
   
     async show(req, res) {
       try {
-        const rent = await Rent.findByPk(req.params.id)
+        const rent = await Rent.findByPk(req.params.id, {
+          include: [
+            { association: 'customer',
+            attributes: ['name', 'email', 'cpf']},
+            { association: 'cars', 
+            attributes: ['plate', 'model', 'year', 'manufacturer', 'daily']}
+          ],
+        })
         if (!rent) {
          return res.status(404).send({erro: "Rent not found"})
         }
-        
-        const {car_id} = rent.dataValues
-      
-        const {model, year, daily} = await Car.findByPk(car_id)
-
- 
-        return res.send({...rent.dataValues, car: {model, year, daily}})
+                     
+        return res.status(200).send({rent})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -45,23 +47,31 @@ class RentController {
   
     async store(req, res) {
       try {
+
         const { customer_id, car_id} = req.params
+        const {name, initial_date, final_date} = req.body
+
         const customer = await Customer.findByPk(customer_id)
         const car = await Car.findByPk(car_id)
+
         if(!customer) {
           return res.status(404).send({ error: "Customer not found" })
         }
+        
         if(!car) {
           return res.status(404).send({ error: "Car not found" })
         }
         
+
         const rent = await Rent.create({
-          ...req.body,
+          name,
+          initial_date,
+          final_date,
           customer_id,
           car_id,
         })
   
-        return res.send({ inserted_rent: rent})
+        return res.status(201).send({ inserted_rent: rent})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -75,7 +85,7 @@ class RentController {
          }
         await rent.update(req.body)
   
-        return res.send({ altered_rent: rent })
+        return res.status(200).send({ altered_rent: rent })
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }

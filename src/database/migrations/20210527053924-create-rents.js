@@ -28,7 +28,6 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false
       }, 
       initial_date: {
         type: Sequelize.DATE,

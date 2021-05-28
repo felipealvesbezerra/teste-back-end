@@ -29,7 +29,7 @@ module.exports = {
         allowNull: false
       },
       phone: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.STRING
       },
       birth_date: {
         type: Sequelize.STRING

@@ -6,10 +6,36 @@ const customerRoute = require('./src/routes/CustomerRoute')
 const rentRoute = require('./src/routes/RentRoute')
 const carRoutes = require('./src/routes/CarRoute')
 
-app.use(morgan('dev'))
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
+
+app.use(morgan('tiny'))
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
+const swaggerOptions = {
+    definition: {
+        openapi: "3.0.0",
+        info: {
+            description: `Api simples para locação de veículos.`,
+            version: "1.0.0",
+            title: "Crud API - RentCar",
+            contact: {
+                email: "leoguedes.14@hotmail.com",
+            },
+        },
+        servers: [
+            {
+                url: "http://localhost:3000",
+            },
+        ],
+    },
+    apis: ["./src/routes/*.js"],
+}
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 app.use('/customers', customerRoute)
 app.use('/customers', rentRoute)

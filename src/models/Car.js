@@ -22,6 +22,15 @@ class Car extends Model {
                     }
                 }
             },
+            manufacturer: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    notNull: {
+                        msg: 'Manufacturer cannot be null'
+                    }
+                }
+            },
             year: {
                 type: DataTypes.STRING,
                 allowNull: false,

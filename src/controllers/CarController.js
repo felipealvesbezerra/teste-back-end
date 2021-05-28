@@ -29,7 +29,7 @@ class CarController {
       try {
         const car = await Car.create(req.body)
   
-        return res.send({inserted_car: car})
+        return res.status(201).send({inserted_car: car})
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
@@ -43,7 +43,7 @@ class CarController {
         }
         await car.update(req.body)
   
-        return res.send({ altered_car: car })
+        return res.status(200).send({ altered_car: car })
       } catch (err) {
         return res.status(400).send({ error: err.message })
       }
