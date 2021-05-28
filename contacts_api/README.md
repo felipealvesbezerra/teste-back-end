@@ -13,9 +13,11 @@
 - [MongoDB](https://docs.mongodb.com/)
 
 - [Mongoose](https://mongoosejs.com/)
+
   </br>
 
-local server
+### Local Server  
+Open the  terminal and run of commands bellow:
 
 `npm install`
 
@@ -32,7 +34,7 @@ The server is running in [http://localhost:3000/](http://localhost:3000/)
 
 </br>
 
-### for test
+## Testing database
 </br>
 
 ### database MongoDB cloud
@@ -51,6 +53,7 @@ The server is running in [http://localhost:3000/](http://localhost:3000/)
 
 </br>
 </br>
+
 ### Contact Me
 
 [https://ulissesnewdev.netlify.app/](https://ulissesnewdev.netlify.app/)
