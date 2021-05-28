@@ -12,6 +12,10 @@
 ```
 > yarn devStart
 ```
+#### Postman documentation
+```
+https://www.postman.com/rootslowed/workspace/teste-backend/documentation/13749018-d6869674-13a8-458c-ba53-0de196389431
+```
 
 #### Postman collection
 ```
