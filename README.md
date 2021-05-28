@@ -1,24 +1,23 @@
-# Teste para candidatos à vaga de desenvolvedor Back-end NodeJS
+# BACK-END TEST
 
-> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.
+#### Clone this repository and install dependencies
+```
+> git clone git@github.com:root-marco/teste-back-end.git
+> cd teste-back-end
 
-## CRIAR UM CRUD
-CRUD significa Criar, Ler, Atualizar e Excluir . Quais são as operações básicas que um aplicativo da web simples deve realizar.
+> yarn install
+```
 
- ## Iniciando Teste
+#### Run development with nodemon
+```
+> yarn devStart
+```
+#### Postman documentation
+```
+https://www.postman.com/rootslowed/workspace/teste-backend/documentation/13749018-d6869674-13a8-458c-ba53-0de196389431
+```
 
-Para iniciar o teste, faça um fork deste repositório.
-
-1. Baixe o fork em sua maquina;
-2. Crie seu CRUD, necessário conter 10 campos.
-3. Utilizar plugin de sua escolha parar gerar a documentação da API, e informar no readme.md como gerar ela.
-4. Adicionar no seu readme.md o link da colletciton no postman
-
-## BANCO DE DADOS 
-Utilizar um banco de dados Cloud para facilitar nossos teste.
-Caso não conheça nenhum segue uma indicação https://mlab.com/
-
-* **Importante:** Usamos o mesmo teste para todos os níveis de front: **júnior**, **pleno** ou **sênior**, mas procuramos adequar nossa exigência na avaliação com cada um desses níveis sem, por exemplo, exigir excelência de quem está começando :-)
-
-
-**Boa sorte!**
+#### Postman collection
+```
+https://www.getpostman.com/collections/b514313bce2493df09df
+```
