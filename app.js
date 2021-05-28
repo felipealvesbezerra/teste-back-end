@@ -1,7 +1,8 @@
 // MODULES
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv"; dotenv.config();
+import dotenv from "dotenv";
+dotenv.config();
 
 // APP
 const app = express();
@@ -9,7 +10,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const MONGOURI = process.env.MONGOURI;
 
-// ROUTER
+// ROUTES
 import userRouter from "./src/routes/user.js";
 app.use("/user", userRouter);
 

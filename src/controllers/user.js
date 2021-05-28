@@ -1,7 +1,6 @@
 import User from "../models/User.js";
 
-// Getting All
-export async function getUsers (req, res) {
+export async function getUsers(req, res) {
 
   try {
     const users = await User.find();
@@ -14,15 +13,13 @@ export async function getUsers (req, res) {
 
 }
 
-// Getting One
-export async function getUserId (req, res) {
+export async function getUserId(req, res) {
 
   res.json(res.user);
 
 }
 
-// Creating One
-export async function postUser (req, res) {
+export async function postUser(req, res) {
 
   const user = new User({
     firstname: req.body.firstname,
@@ -47,8 +44,7 @@ export async function postUser (req, res) {
 
 }
 
-// Updating One
-export async function patchUser (req, res) {
+export async function patchUser(req, res) {
 
   if (req.body.firstname) res.user.firstname = req.body.firstname;
   if (req.body.lastname) res.user.lastname = req.body.lastname;
@@ -71,8 +67,7 @@ export async function patchUser (req, res) {
 
 }
 
-// Deleting One
-export async function deleteUser (req, res) {
+export async function deleteUser(req, res) {
 
   try {
     await res.user.remove();

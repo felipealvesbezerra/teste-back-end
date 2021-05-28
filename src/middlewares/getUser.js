@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-async function getUser (req, res, next) {
+async function getUser(req, res, next) {
 
   let user;
 
@@ -12,9 +12,15 @@ async function getUser (req, res, next) {
       });
     }
   } catch (error) {
-    return res.status(500).json({
-      message: error.message,
-    });
+    if (error.kind == "ObjectId") {
+      res.status(400).json({
+        message: "User ID inexistent"
+      });
+    } else {
+      res.status(500).json({
+        error: error.message
+      });
+    }
   }
 
   res.user = user;
