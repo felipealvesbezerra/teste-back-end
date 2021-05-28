@@ -7,4 +7,5 @@ const port = 3000
 const server = http.createServer(app)
 server.listen(port, () => {
     console.log('Servidor rodando na porta', port)
+	console.log(`Documentação: http://localhost:${port}/api-docs/`)
 });
