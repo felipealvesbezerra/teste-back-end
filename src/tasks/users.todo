@@ -1,0 +1,14 @@
+Regras de select de usuário:
+    ✔ Deve retornar 200 e todos os usuários se não houver um ID especificado @done(21-05-29 15:03)
+    ✔ Deve retornar 200 e um usuário com base no ID especificado @done(21-05-29 15:10)
+Regras de insert de usuário:
+    ✔ Deve retornar 201 ao inserir um usuário @done(21-05-28 12:40)
+    ✔ Deve retornar 400 se houver algum dado obrigatório faltando @done(21-05-28 23:05)
+    ✔ Deve retornar 409 se algum campo de valor único já estiver registrado @done(21-05-28 23:14)
+Regras de update de usuário:
+    ✔ Deve retornar 200 ao alterar os dados de um usuário @done(21-05-28 23:42)
+    ✔ Deve retornar 400 se o ID não for informado na requisição @done(21-05-28 23:52)
+    ✔ Deve retornar 409 se algum campo de valor único já estiver registrado @done(21-05-28 23:57)
+Regras de exclusão de usuário:
+    ✔ Deve retornar 200 ao excluir um usuário @done(21-05-29 16:09)
+    ✔ Deve retornar 404 se o ID não for informado na requisição @done(21-05-29 16:09)
