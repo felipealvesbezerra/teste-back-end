@@ -1,0 +1,102 @@
+openapi: '3.0.3'
+servers:
+  - url: 'http://localhost:3000'
+    description: Development
+
+info:
+  description: 'Api docs for CRUD api'
+  title: 'Example'
+  version: '1.0.0'
+
+components:
+  responsesSchemes:
+    badRequest:
+      description: 	This is a bad request, please stick to the API description
+    internalError:
+      description: An internal server error occured, notify your administrator
+  schemas:
+    appDTO:
+      application/json:
+        schema:
+          type: object
+          properties:
+            company:
+              type: string
+            locality:
+              type: string
+            month:
+              type: string
+            year:
+              type: number
+            value:
+              type: number
+            employees:
+              type: number
+            AgeAverage:
+              type: number
+            CEO:
+              type: string
+            salaryAverage:
+              type: number
+            street:
+              type: string
+
+
+paths:
+
+  /cadastro:
+    post:
+      summary: Operation to register a new company
+      description: Operation to register a new company
+      requestBody:
+        required: true
+        content:
+          $ref: '#/components/schemas/appDTO'
+      responses:
+        200:
+          description: Company registered
+          schema:
+            $ref: '#/components/schemas/appDTO'
+
+  /cadastro/{company}:
+    put:
+      summary: Operation to update a document on database
+      description: Operation to update a document on database
+      parameters:
+        - in: path
+          name: company
+          type: string
+          required: true
+      responses:
+        200:
+          description: Documento updated successfully
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+
+  /listar:
+    get:
+      summary: Operation to return all documents
+      description: Operation to return all documents
+      responses:
+        200:
+          description: User returned successfully
+          schema:
+            $ref: '#/components/schemas/appDTO'
+
+
+  /deletar/{company}:
+    delete:
+      summary: Operation to delete a document
+      description: Operation to delete a document
+      parameters:
+        - in: path
+          name: company
+          type: string
+          required: true
+      responses:
+        200:
+          description: Document deleted successfully
