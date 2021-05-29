@@ -1,0 +1,73 @@
+GET http://localhost:3333/users
+//rota index, listagem de todos os registros
+###
+GET http://localhost:3333/users/teste@hotmail.com.br
+//rota show, retorna um user pelo email
+###
+
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "first_name": "teste",
+  "email": "teste@hotmail.com.br"
+}
+//rota create, campos obrigatórios first_name: string e email:string
+###
+
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "first_name": "teste",
+  "middle_name": "teste",
+  "last_name": "teste",
+  "nickname": "tes",
+  "email": "teste2@hotmail.com.br",
+  "phone": "18997799779",
+  "cpf": "388.273.420-52",
+  "rg": "152643598",
+  "state": "SP",
+  "city": "Presidente Prudente"
+}
+//rota create, todos os campos:
+//first_name: string - required
+//middle_name: string
+//last_name: string
+//nickname: string
+//email: string - required
+//phone: string
+//cpf: string - min(14) - max(14)
+//rg: string
+//state: string - min(2) - max(2) - Como SP para São Paulo
+//city: string
+###
+
+PUT http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "id": "356b566e-4ddc-41cd-8a74-613c06fbc58a",
+  "first_name": "teste",
+  "middle_name": "teste",
+  "last_name": "teste",
+  "nickname": "tes",
+  "email": "teste2@hotmail.com.br",
+  "phone": "18997799779",
+  "cpf": "388.273.420-52",
+  "rg": "152643598",
+  "state": "SP",
+  "city": "Presidente Prudente"
+}
+//rota update, necessário ter o campo id
+###
+
+DELETE http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "id": "522d76c2-e250-474a-92ea-b2d731ccb4e6"
+}
+//rota delete, deleta um usuário através do campo id
+###
+//para os testes substuir os valores id e email para a consulta por valores já cadastrados
