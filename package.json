@@ -1,0 +1,33 @@
+{
+  "name": "teste-back-end",
+  "version": "1.0.0",
+  "description": "> Todos os interessados que fizerem pull request e enviarem o curriculo para **felipe.alves@fbmobile.com.br** com assunto **NOME DA VAGA + NOME DA EMPRESA** receberão um feedback.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dudu671/teste-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dudu671/teste-back-end/issues"
+  },
+  "homepage": "https://github.com/Dudu671/teste-back-end#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.1",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
+  }
+}
