@@ -8,7 +8,7 @@
 
   #### Clone o repositório.
     ```
-    > git clone 
+    > git clone https://github.com/TGF0911/teste-back-end.git
     > yarn install
     ```
 
